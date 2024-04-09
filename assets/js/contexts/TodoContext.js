@@ -19,7 +19,12 @@ class TodoContextProvider extends React.Component {
     }
 
     // Create
-    createTodo() {}
+    createTodo=(todo) => {
+        console.log(todo);
+        let data= [...this.state.todos];
+        data.push({ name: todo.task, description: todo.description });
+        this.setState({todos: data});
+    }
 
     // Read
     readTodo() {}
